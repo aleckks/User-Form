@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Personal Information Form</h2>
+
+<form id="myForm">
+ First name:<br>
+ <input type="text" id="firstname" name="firstname">
+ <br>
+ Last name:<br>
+ <input type="text" id="lastname" name="lastname">
+ <br>
+ Age:<br>
+ <input type="text" id="age" name="age">
+ <br>
+ Gender:<br>
+ <input type="text" id="gender" name="gender">
+ <br>
+ Birthdate:<br>
+ <input type="date" id="birthdate" name="birthdate">
+ <br>
+ Address:<br>
+ <input type="text" id="address" name="address">
+ <br>
+ Email address:<br>
+ <input type="text" id="email" name="email">
+ <br><br>
+ <input type="button" value="Submit" onclick="displayData()">
+</form>
+
+<p id="display"></p>
+<script>
+  function displayData() {
+   var firstname = document.getElementById("firstname").value;
+   var lastname = document.getElementById("lastname").value;
+   var age = document.getElementById("age").value;
+   var gender = document.getElementById("gender").value;
+   var birthdate = document.getElementById("birthdate").value;
+   var address = document.getElementById("address").value;
+   var email = document.getElementById("email").value;
+  
+   var displayString = "First Name: " + firstname + "<br>" +
+                         "Last Name: " + lastname + "<br>" +
+                         "Age: " + age + "<br>" +
+                         "Gender: " + gender + "<br>" +
+                         "Birthdate: " + birthdate + "<br>" +
+                         "Address: " + address + "<br>" +
+                         "Email Address: " + email;
+  
+   document.getElementById("display").innerHTML = displayString;
+  }
+  </script>
+
+</body>
+</html>
